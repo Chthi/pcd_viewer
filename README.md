@@ -35,5 +35,5 @@ conda install -c anaconda numpy
 ```
 
 ### Other
-PCDViewer also looks nice² but only complied files so I wouldn't recommend.
+PCDViewer looks interesting but as only complied files are available, I wouldn't recommend.
 https://github.com/XuShengpan/PCDViewer
