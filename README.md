@@ -17,21 +17,37 @@ https://github.com/tatsy/vscode-3d-preview
 ### C++
 https://pcl.readthedocs.io/en/latest/index.html#visualization
 
-### Python
+### Python (Open3D)
 Using the `open-3d` library.
-```
-python pcd_view.py ~/carla/HDMaps/Town02.pcd
+```python
+import open3d as o3d
+pcd = o3d.io.read_point_cloud("file.pcd")
+o3d.visualization.draw_geometries([pcd])
 ```
 
-#### Installation
+### PCD Viewer
 
+#### Installation (Linux)
+
+```bash
+./install.bash
 ```
-conda install -c open3d-admin open3d
-# some open3d dependency may not be installed automatically with the above command 
-conda install -c conda-forge plyfile
-# probably needed to also install
-conda install -c conda-forge libstdcxx-ng
-conda install -c anaconda numpy 
+It will install the PCD Viewer as an application (desktop entry, binary for terminal) and set it as the default viewer for `.pcd` files. It relies on a local virtual environment with the `open3d` library installed.
+
+#### Usage
+
+Terminal
+```bash
+./pcd_viewer.bash file.pcd
+```
+
+#### Usage (File Manager)
+Just double click on a `.pcd` file to open it with PCD Viewer or right click and select "Open with PCD Viewer".
+
+#### Uninstallation
+
+```bash
+./uninstall.bash
 ```
 
 ### Other
